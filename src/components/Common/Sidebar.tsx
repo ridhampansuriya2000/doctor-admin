@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { BsList, BsCalendarCheck, BsFillHospitalFill, BsFillPersonFill, BsCalendarFill, BsFillFileEarmarkMedicalFill, BsPersonBoundingBox, BsGearFill, BsPersonCheckFill, BsSearch, BsFileMedical, BsPieChartFill } from 'react-icons/bs';
 import '../../Styles/app.css';
+import { Link, useLocation  } from 'react-router-dom';
+import {navConfig} from "../../routes/navConfig";
+
+
 
 const Sidebar = ({routes}:any) => {
-  const [isOpen, setIsOpen] = useState(true); // Set initial state to true
+  const location : any = useLocation();
+
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -27,56 +33,13 @@ const Sidebar = ({routes}:any) => {
                 <BsSearch />
               </a>
             </li>
-            <li>
-              <a href="#" className='active'>
-                <BsCalendarCheck />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsFillHospitalFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsFillPersonFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsCalendarFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsFillFileEarmarkMedicalFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsPersonBoundingBox />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsGearFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsFileMedical />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsPieChartFill />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <BsPersonCheckFill />
-              </a>
-            </li>
+            {routes?.map((item:any, index:number) => (
+                <li key={index}>
+                  <Link to={item.path} className={item?.path.includes(location.pathname) || location.pathname.includes(item?.subPath) ? "active" : ''}>
+                    {item.icon}
+                  </Link>
+                </li>
+            ))}
           </ul>
         </div>
       )}
@@ -87,76 +50,15 @@ const Sidebar = ({routes}:any) => {
             <input type="text" placeholder="Search..." />
             <span className="tooltip">Search</span>
           </li>
-          <li>
-            <a href="#">
-              <BsCalendarCheck />
-              <span className="links_name">Appointments</span>
-            </a>
-            <span className="tooltip">Appointments</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsFillHospitalFill />
-              <span className="links_name">Bed Management</span>
-            </a>
-            <span className="tooltip">Bed Management</span>
-          </li>
-          <li>
-            <a href="#" className='active'>
-              <BsFillPersonFill />
-              <span className="links_name">Doctors</span>
-            </a>
-            <span className="tooltip">Doctors</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsCalendarFill />
-              <span className="links_name">Schedule</span>
-            </a>
-            <span className="tooltip">Schedule</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsFillFileEarmarkMedicalFill />
-              <span className="links_name">Prescriptions</span>
-            </a>
-            <span className="tooltip">Prescriptions</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsPersonBoundingBox />
-              <span className="links_name">DIAGNOSIS</span>
-            </a>
-            <span className="tooltip">DIAGNOSIS</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsGearFill />
-              <span className="links_name">Notice Boards</span>
-            </a>
-            <span className="tooltip">Notice Boards</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsFileMedical />
-              <span className="links_name">IPD Patients</span>
-            </a>
-            <span className="tooltip">IPD Patients</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsPieChartFill />
-              <span className="links_name">Payrolls</span>
-            </a>
-            <span className="tooltip">Payrolls</span>
-          </li>
-          <li>
-            <a href="#">
-              <BsPersonCheckFill />
-              <span className="links_name">Patients</span>
-            </a>
-            <span className="tooltip">Patients</span>
-          </li>
+          {routes?.map((item:any, index:number) => (
+              <li key={index}>
+                <Link to={item.path}  className={item?.path.includes(location.pathname) || location.pathname.includes(item?.subPath) ? "active" : ''}>
+                  {item.icon}
+                  <span className="links_name">{item.title}</span>
+                </Link>
+                <span className="tooltip">{item.title}</span>
+              </li>
+          ))}
           {/* <li className="profile">
             <div className="profile-details">
               <BsBoxArrowLeft />

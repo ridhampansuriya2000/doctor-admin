@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a66659d-12bf-4504-aaf8-fa3a640257ad" name="Default Changelist" comment="" />
+    <list default="true" id="9a66659d-12bf-4504-aaf8-fa3a640257ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Appointment/Appointment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Appointment/Appointment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DashboardBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardBody.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/navConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/navConfig.tsx" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2gapyvdLJhTvUEZEY00dfNxYzc0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -45,11 +62,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715945800467</updated>
-      <workItem from="1715945801540" duration="7763000" />
+      <workItem from="1715945801540" duration="17530000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Common/Header.tsx</url>
+          <line>29</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

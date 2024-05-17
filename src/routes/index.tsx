@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import {RouteType, NavConfigType, navConfig} from "./navConfig";
+import Layout from "../components/Layout";
 
 // interface Props {
 //     navConfig: NavConfigType;
@@ -15,13 +16,17 @@ const CustomRoutes: React.FC = () => {
                 console.log('routes',navConfig[role],role)
 
                 return privatesRoute ? isLogin
-                    ? routes?.map((route, key) => (
-                        <Route
-                            key={key}
-                            path={route.path}
-                            element={route.component}
-                        />
-                    ))
+                    ? <Layout>
+                        <Routes>
+                        {routes?.map((route, key) => (
+                            <Route
+                                key={key}
+                                path={route.path}
+                                element={route.component}
+                            />
+                        ))}
+                        </Routes>
+                    </Layout>
                     : <Navigate to="/login" />
                     :  routes?.map((route, key) => (
                         <Route
@@ -37,8 +42,8 @@ const CustomRoutes: React.FC = () => {
         <Router>
             <Routes>
                 {switchRoutes(navConfig['common'], false)}
-                {role && switchRoutes(navConfig['doctor'], true)}
             </Routes>
+            {role && switchRoutes(navConfig['superAdmin'], true)}
         </Router>
     );
 };

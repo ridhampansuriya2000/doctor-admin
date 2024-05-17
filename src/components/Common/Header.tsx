@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaMoon, FaBell } from "react-icons/fa";
 import { Dropdown } from "react-bootstrap";
 import {
@@ -12,12 +12,16 @@ import Custom_Modal from "./Custom_Modal";
 import Edit_profile from "./Edit_profile";
 import Change_password from "./Change_password";
 import Change_language from "./Change_language";
+import {Link, useLocation} from "react-router-dom";
 
 interface HeaderProps {
-  linkTexts: string[];
-  activeIndex: number; // Index of the active link
+  linkTexts: any[];
+  children: any;
 }
-const Header: React.FC<HeaderProps> = ({ linkTexts , activeIndex  }) => {
+const Header: React.FC<HeaderProps> = ({ linkTexts=[] , children,  }) => {
+
+  const location : any = useLocation();
+
   const [key, setKey] = useState<string>("home"); 
 
   return (
@@ -25,11 +29,11 @@ const Header: React.FC<HeaderProps> = ({ linkTexts , activeIndex  }) => {
       <nav className="navbar">
         <div className="page_links">
           <ul className="d-flex gap-4">
-          {linkTexts.map((text, index) => (
+          {linkTexts.map((item, index) => (
               <li key={index}>
-                <a href="#" className={index === activeIndex ? 'active' : ''}>
-                  {text}
-                </a>
+                <Link to={item.path}  className={item?.path === location.pathname ? 'active' : ''}>
+                  {item?.title}
+                </Link>
               </li>
             ))}
           </ul>
@@ -197,6 +201,7 @@ const Header: React.FC<HeaderProps> = ({ linkTexts , activeIndex  }) => {
           </Dropdown>
         </div>
       </nav>
+      {children}
     </>
   );
 };

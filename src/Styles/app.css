@@ -27,15 +27,19 @@ body {
 
 .dashboard-body {
   width: 94%;
-  margin-left: auto;
+  margin-left: 6%;
   transition: all 0.5s ease;
   background: #eff3f7;
   color: #6c757d;
 }
 
+.dashboard-body > div{
+  padding: 30px;
+}
+
 .sidebar.open ~ .dashboard-body {
   width: 80%;
-  margin-left: auto;
+  margin-left: 20%;
 }
 
 .sidebar .logo-details {

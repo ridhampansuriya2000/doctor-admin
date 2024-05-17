@@ -13,10 +13,10 @@ const DashboardBody = () => {
   return (
     <div className="dashboard-body">
       {/* <Header linkText="Doctor" /> */}
-      <Header
-        linkTexts={["Appointments", "Appointment Transaction"]}
-        activeIndex={0}
-      />
+      {/*<Header*/}
+      {/*  linkTexts={["Appointments", "Appointment Transaction"]}*/}
+      {/*  activeIndex={0}*/}
+      {/*/>*/}
       <div className="admin_parent">
         {/* <Doctor /> */}
         {/* <Appointment/> */}

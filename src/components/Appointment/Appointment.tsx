@@ -8,10 +8,10 @@ import Doctor_details_tabs from './Doctor_details_tabs'
 const Appointment = () => {
   return (
     <div>
-        {/* <Appointment_listing/> */}
+         <Appointment_listing/>
         {/* <Patient_details/> */}
-        {/* <Appointment_Transaction/> */}
-        <Doctor_details_tabs/>
+         <Appointment_Transaction/>
+        {/*<Doctor_details_tabs/>*/}
     </div>
   )
 }
