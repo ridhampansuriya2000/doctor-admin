@@ -23,95 +23,118 @@ export interface RouteType {
     title: string;
     path: string;
     subPath?: string;
+    isShowInSidebar?: boolean;
     component: JSX.Element;
     icon: any,
 }
 
 export const commonRoutes: RouteType[] = [
     {
-        title: "Dashboard",
+        title: "Login",
         path: '/login',
         component: <Login/>,
         icon : '',
     },
 ];
 
-export const doctorRoutes: RouteType[] = [
+export const superAdminRoutes: RouteType[] = [
     {
         title: "Dashboard",
         path: '/',
+        subPath: '/',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsCalendarCheck/>
     },
     {
-        title: "Doctor",
-        path: '/doctor',
+        title: "Admins",
+        path: '/admins',
+        subPath: 'admin',
+        isShowInSidebar:true,
         component: <Doctor/>,
         icon: <BsFillPersonFill/>
     },
     // Add other items similarly
     {
-        title: "Bed Management",
-        path: '/bed-management',
+        title: "Hospital Type",
+        path: '/hospital-type',
+        subPath: 'hospital',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFillHospitalFill/>
     },
     {
-        title: "Schedule",
-        path: '/schedule',
+        title: "Hospitals",
+        path: '/hospitals',
+        subPath: 'hospitals',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsCalendarFill/>
     },
     {
-        title: "Prescriptions",
-        path: '/prescriptions',
+        title: "Billing",
+        path: '/subscription-plans',
+        subPath: 'subscription',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFillFileEarmarkMedicalFill/>
     },
     {
-        title: "Diagnosis",
-        path: '/diagnosis',
+        title: "Subscribers",
+        path: '/subscribers',
+        subPath: 'subscriber',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPersonBoundingBox/>
     },
     {
-        title: "Notice Boards",
-        path: '/notice-boards',
+        title: "Enquiries",
+        path: '/enquiries',
+        subPath: 'enquiry',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsGearFill/>
     },
     {
-        title: "IPD Patients",
-        path: '/ipd-patients',
+        title: "Landing CMS",
+        path: '/cms',
+        subPath: 'section',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFileMedical/>
     },
     {
-        title: "Payrolls",
-        path: '/payrolls',
+        title: "Setting",
+        path: '/settings',
+        subPath: 'setting',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPieChartFill/>
     },
-    {
-        title: "Patients",
-        path: '/patients',
-        component: <Dashboard/>,
-        icon: <BsPersonCheckFill/>
-    }
+    // {
+    //     title: "Patients",
+    //     path: '/patients',
+    //     subPath: 'patient',
+    //     isShowInSidebar:true,
+    //     component: <Dashboard/>,
+    //     icon: <BsPersonCheckFill/>
+    // }
 ];
 
-export const superAdminRoutes: RouteType[] = [
+export const doctorRoutes: RouteType[] = [
     {
         title: "Appointments",
         path: '/appointments',
         subPath: 'appointment',
+        isShowInSidebar:true,
         component: <Appointment/>,
         icon: <BsCalendarCheck/>
     },
     {
         title: "Bed Management",
-        path: '/bed-assigns',
+        path: '/bed',
         subPath: 'bed',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFillHospitalFill/>
     },
@@ -119,6 +142,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Doctor",
         path: '/doctor',
         subPath: 'doctor',
+        isShowInSidebar:true,
         component: <Doctor/>,
         icon: <BsFillPersonFill/>
     },
@@ -127,6 +151,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Schedule",
         path: '/schedule',
         subPath: 'schedule',
+        isShowInSidebar:true,
         component: <Schudules/>,
         icon: <BsCalendarFill/>
     },
@@ -134,6 +159,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Prescriptions",
         path: '/prescriptions',
         subPath: 'prescriptions',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFillFileEarmarkMedicalFill/>
     },
@@ -141,6 +167,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Document",
         path: '/document',
         subPath: 'document',
+        isShowInSidebar:true,
         component: <Documents/>,
         icon: <BsPersonBoundingBox/>
     },
@@ -148,6 +175,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Diagnosis",
         path: '/diagnosis',
         subPath: 'diagnosi',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPersonBoundingBox/>
     },
@@ -155,20 +183,23 @@ export const superAdminRoutes: RouteType[] = [
         title: "Notice Boards",
         path: '/notice-boards',
         subPath: 'notice',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsGearFill/>
     },
     {
         title: "IPD Patients",
-        path: '/ipd-patients',
+        path: '/ipd',
         subPath: 'ipd',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFileMedical/>
     },
     {
         title: "Live Consultation",
-        path: '/live-consultation',
+        path: '/live',
         subPath: 'live',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsFileMedical/>
     },
@@ -176,6 +207,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Payrolls",
         path: '/payrolls',
         subPath: 'payroll',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPieChartFill/>
     },
@@ -183,6 +215,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Patients",
         path: '/patients',
         subPath: 'patient',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPersonCheckFill/>
     },
@@ -190,6 +223,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "Reports",
         path: '/reports',
         subPath: 'report',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPersonCheckFill/>
     },
@@ -197,6 +231,7 @@ export const superAdminRoutes: RouteType[] = [
         title: "SMS",
         path: '/sms',
         subPath: 'sms',
+        isShowInSidebar:true,
         component: <Dashboard/>,
         icon: <BsPersonCheckFill/>
     }

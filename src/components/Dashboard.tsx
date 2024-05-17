@@ -9,10 +9,6 @@ const Dashboard = () => {
     <>
     {/* <Login/> */}
     {/*<Sidebar/>*/}
-      <Header
-          linkTexts={[{title:"Doctor", path :'/doctor'}]}
-          children=''
-      />
     <DashboardBody/>
     </>
   )

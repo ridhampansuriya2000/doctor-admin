@@ -25,9 +25,9 @@ const Login = () => {
   const onLogin = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if(role){
-      localStorage.setItem('isLogin', 'true');
+      localStorage.setItem('isLogin', "true");
     localStorage.setItem('role', role);
-    navigate('/');
+      navigate('/');
     }
   };
 

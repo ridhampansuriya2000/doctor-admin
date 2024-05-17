@@ -52,7 +52,7 @@ const Sidebar = ({routes}:any) => {
           </li>
           {routes?.map((item:any, index:number) => (
               <li key={index}>
-                <Link to={item.path}  className={item?.path.includes(location.pathname) || location.pathname.includes(item?.subPath) ? "active" : ''}>
+                <Link to={item.path}  className={item?.path === location.pathname ? "active" : ''}>
                   {item.icon}
                   <span className="links_name">{item.title}</span>
                 </Link>

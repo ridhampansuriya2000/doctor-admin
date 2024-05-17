@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a66659d-12bf-4504-aaf8-fa3a640257ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Appointment/Appointment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Appointment/Appointment.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Common/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Common/Sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Common/Sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DashboardBody.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardBody.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/navConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/navConfig.tsx" afterDir="false" />
@@ -62,8 +59,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715945800467</updated>
-      <workItem from="1715945801540" duration="17530000" />
+      <workItem from="1715945801540" duration="17800000" />
+      <workItem from="1715969911563" duration="5963000" />
     </task>
+    <task id="LOCAL-00001" summary="add routing">
+      <created>1715966390443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715966390443</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -74,19 +80,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/Common/Header.tsx</url>
-          <line>29</line>
-          <properties lambdaOrdinal="-1" />
+          <line>33</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

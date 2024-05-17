@@ -22,6 +22,10 @@ const Header: React.FC<HeaderProps> = ({ linkTexts=[] , children,  }) => {
 
   const location : any = useLocation();
 
+  React.useEffect(()=>{
+    console.log('location',location);
+  },[location])
+
   const [key, setKey] = useState<string>("home"); 
 
   return (
@@ -31,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ linkTexts=[] , children,  }) => {
           <ul className="d-flex gap-4">
           {linkTexts.map((item, index) => (
               <li key={index}>
-                <Link to={item.path}  className={item?.path === location.pathname ? 'active' : ''}>
+                <Link to={item.path}  className={item?.path === location.pathname+location?.search ? 'active' : ''}>
                   {item?.title}
                 </Link>
               </li>
